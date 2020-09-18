@@ -60,19 +60,24 @@
   --basic-darkgrey: #a9a9a9;
   --basic-greylight: #c5c5c5;
   --basic-extra-greylight: #eaeaea;
+  --basic-very-greylight: #e5e5e5;
   --basic-grey: #3D546F;
   --basic-green: #63a63e;
+  --basic-bluelighter: #f2f6f8;
   --basic-bluelight: #f3f7f9;
   --basic-very-darkblue: #32425c;
   --basic-darkblue: #212a3a;
   --basic-very-lightblue: #f1f5f7;
   --basic-seashell: #f9f5f0;
   --basic-grayishblue: #293449;
+  --basic-light-grayishblue: #405069;
   --basic-red: #ee3643;
+  --basic-lightred: #ff5537;
   --basic-heavy-darkblue: #161d29;
   --basic-very-lightwarmorange: #ffd180;
   --basic-lightlydark-red: #ca2c37;
   --basic-lightlydark-green: #518534;
+  --basic-very-lightbrown: #f7f3ec;
 
   --transparent-white-05: rgba(255, 255, 255, 0.5);
   --transparent-white-03: rgba(255, 255, 255, 0.3);
@@ -198,8 +203,28 @@ img {
   color: var(--basic-greylight);
 }
 
+.user-panel {
+  font-size: 21px;
+  line-height: 21px;
+  background: var(--basic-white);
+}
+
+.user-panel a {
+  color: inherit;
+}
+
 .order-button {
   background: var(--basic-green);
+}
+
+.navigation-user-list {
+  list-style: none;
+}
+
+.navigation-user-list-item a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-very-darkblue);
 }
 
 /* Site Navigation */
@@ -227,6 +252,10 @@ img {
 
 .user-navigation a:focus {
   opacity: 0.5;
+}
+
+.cart-full {
+  background: var(--basic-red);
 }
 
 /* Promo */
@@ -388,7 +417,7 @@ promo-list-item h3 {
 
 .top-sellers-item {
   background: var(--basic-white);
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--basic-extra-greylight);
 }
 
 /* Services */
@@ -416,7 +445,7 @@ promo-list-item h3 {
 
 .services-nav-item {
   background: var(--basic-very-darkblue);
-  box-shadow: 0px 1px 0px var(--basic-grayishblue), inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-grayishblue), inset 0px 1px 0px var(--basic-light-grayishblue);
 }
 
 .services-nav-item:hover {
@@ -462,6 +491,10 @@ promo-list-item h3 {
   color: var(--basic-black);
 }
 
+.apply-button {
+  background: var(--basic-lightred);
+}
+
 /* Company */
 
 .company h2 {
@@ -498,6 +531,130 @@ promo-list-item h3 {
   font-size: 13px;
   line-height: 24px;
   color: var(--basic-black);
+}
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+/* Content */
+
+.content-header {
+  background: var(--basic-bluelighter);
+}
+
+.content-header h1 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-very-darkblue);
+}
+
+/* Order by */
+
+.sort {
+  background: var(--basic-very-lightbrown);
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.sort-list {
+  list-style: none;
+}
+
+.sort-list a {
+  font: inherit;
+  color: inherit;
+  border-bottom: 1px dotted var(--basic-red);
+}
+
+.order-active a {
+  color: var(--basic-red);
+  border-bottom: none;
+}
+
+.order-by a {
+  border-bottom: none;
+}
+
+/* Catalog  List*/
+
+.catalog-list-item {
+  list-style: none;
+  background: var(--basic-white);
+  border: 1px solid var(--basic-extra-greylight);
+}
+
+.catalog-list-link h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
+}
+
+.catalog-list-link-item {
+  background: var(--basic-white);
+  border: 1px solid var(--basic-extra-greylight);
+}
+
+/* Pagination */
+
+.pagination {
+  list-style: none;
+}
+
+.pagination a {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.page-item {
+  background: var(--basic-white);
+  border: 1px solid var(--basic-very-greylight);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.current-page {
+  background: var(--basic-red);
+}
+
+.current-page a {
+  color: var(--basic-white);
+}
+
+.about-product {
+  background: var(--basic-very-lightblue);
+  color: var(--basic-black);
+}
+
+/* About Product */
+
+.about-product h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.about-product p {
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 /* Main footer */
@@ -550,7 +707,7 @@ promo-list-item h3 {
   text-decoration: underline;
 }
 
-.footer-navigation-item-top a:focus {
+.footer-navigation-item-bottom a:focus {
   opacity: 0.5;
 }
 
