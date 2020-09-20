@@ -81,6 +81,7 @@
 
   --transparent-white-05: rgba(255, 255, 255, 0.5);
   --transparent-white-03: rgba(255, 255, 255, 0.3);
+  --transparent-black-024: rgba(0, 0, 0, 0.24);
   --transparent-black-015: rgba(0, 0, 0, 0.15);
   --transparent-greylight-03: rgba(197, 197, 197, 0.3);
   --transparent-darkgrey-03: rgba(169, 169, 169, 0.3);
@@ -101,7 +102,6 @@
 /* Global */
 
 body {
-  min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "Cuprum", "Open Sans", sans-serif;;
@@ -109,7 +109,6 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: var(--basic-black);
-  background-color: var(--basic-white);
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -123,7 +122,40 @@ img {
   height: auto;
 }
 
+.container {
+  min-width: 960px;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /* Main navigation */
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--basic-red);
+  box-shadow: inset 0 -5px 0 var(--transparent-black-024);
+  display: inline-block;
+  position: relative;
+}
+
+.logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-header-logo {
+  width: 220px;
+  height: 47px;
+}
+
 .main-navigation {
   background-color: var(--basic-bluelight);
 }
@@ -264,7 +296,7 @@ img {
   color: var(--basic-white);
 }
 
-promo-list-item h3 {
+.promo-list-item h3 {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -356,18 +388,18 @@ promo-list-item h3 {
   color: var(--basic-very-darkblue);
 }
 
-.top-products h3 {
+.product-link {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
   color: var(--basic-black);
 }
 
-.top-products-list {
+.product {
   list-style: none;
 }
 
-.top-products-list-item {
+.product {
   background: var(--basic-white);
   border: 1px solid var(--basic-extra-greylight);
 }
@@ -445,7 +477,7 @@ promo-list-item h3 {
 
 .services-nav-item {
   background: var(--basic-very-darkblue);
-  box-shadow: 0px 1px 0px var(--basic-grayishblue), inset 0px 1px 0px var(--basic-light-grayishblue);
+  box-shadow: 0 1px 0 var(--basic-grayishblue), inset 0 1px 0 var(--basic-light-grayishblue);
 }
 
 .services-nav-item:hover {
@@ -463,7 +495,7 @@ promo-list-item h3 {
 
 .services-nav-item-active {
   background: var(--basic-white);
-  box-shadow: 0px 1px 0px var(--basic-white);
+  box-shadow: 0 1px 0 var(--basic-white);
 }
 
 .services-nav-item-active button {
@@ -590,26 +622,6 @@ promo-list-item h3 {
   border-bottom: none;
 }
 
-/* Catalog  List*/
-
-.catalog-list-item {
-  list-style: none;
-  background: var(--basic-white);
-  border: 1px solid var(--basic-extra-greylight);
-}
-
-.catalog-list-link h3 {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
-  color: var(--basic-black);
-}
-
-.catalog-list-link-item {
-  background: var(--basic-white);
-  border: 1px solid var(--basic-extra-greylight);
-}
-
 /* Pagination */
 
 .pagination {
@@ -663,6 +675,11 @@ promo-list-item h3 {
   background: var(--basic-very-darkblue);
 }
 
+.main-footer-logo {
+  width: 220px;
+  height: 68px;
+}
+
 .main-footer-contacts {
   font-size: 18px;
   line-height: 24px;
@@ -683,31 +700,35 @@ promo-list-item h3 {
   list-style: none;
 }
 
-.footer-navigation-item-top a {
+.footer-extra-navigation {
+  list-style: none;
+}
+
+.footer-navigation-item a {
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-very-lightblue);
 }
 
-.footer-navigation-item-bottom a {
+.footer-extra-navigation-item a {
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-very-lightwarmorange);
 }
 
-.footer-navigation-item-top a:hover {
+.footer-navigation-item a:hover {
   text-decoration: underline;
 }
 
-.footer-navigation-item-top a:focus {
+.footer-navigation-item a:focus {
   opacity: 0.5;
 }
 
-.footer-navigation-item-bottom a:hover {
+.footer-extra-navigation-item a:hover {
   text-decoration: underline;
 }
 
-.footer-navigation-item-bottom a:focus {
+.footer-extra-navigation-item a:focus {
   opacity: 0.5;
 }
 
@@ -756,21 +777,21 @@ promo-list-item h3 {
   color: var(--basic-red);
 }
 
-.footer-developed-by {
+.footer-made-by {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
 }
 
-.footer-developed-by a {
+.footer-made-by a {
   color: var(--basic-very-lightwarmorange);
 }
 
-.footer-developed-by a:hover {
+.footer-made-by a:hover {
   text-decoration: underline;
 }
 
-.footer-developed-by a:focus {
+.footer-made-by a:focus {
   color: var(--basic-red);
 }
 
