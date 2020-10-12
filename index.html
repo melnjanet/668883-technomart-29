@@ -16,6 +16,13 @@
               <img src="img/logo-technomart.svg" width="107" height="17" alt="Логотип сайта Техномарт">
             </a>
             <form action="https://echo.htmlacademy.ru" method="GET" class="search-form">
+              <figure>
+                <svg width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z"
+                        fill="#fff"/>
+                </svg>
+              </figure>
               <label for="search" class="search-label" aria-label="Поиск"></label>
               <input class="search" type="search" name="search" id="search" placeholder="Поиск:">
             </form>
@@ -135,7 +142,7 @@
                 </a>
               </h3>
               <figure class="product-image">
-                <img src="img/bosh-bfg-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                <img src="img/bosh-bfg-9000.jpg" width="184" height="164" alt="">
               </figure>
               <div class="product-user-actions">
                 <a class="button buy-button" href="#">Купить</a>
@@ -402,15 +409,36 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-write_us">
+    <section class="modal modal-feedback hidden">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!-- Здесь будет форма логина -->
-      <button class="modal-close" type="button">Закрыть</button>
+      <form class="feedback-form" method="POST" action="https://echo.htmlacademy.ru/">
+        <div class="feedback-wrapper">
+          <div class="feedback-column">
+            <label for="feedback-name">Ваше имя:</label>
+            <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="feedback-column">
+            <label for="feedback-email">Ваш e-mail:</label>
+            <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+          </div>
+          <div class="feedback-column feedback-text">
+            <label for="feedback-text">Текст письма:</label>
+            <textarea id="feedback-text" name="text" placeholder="В свободной форме"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="button send" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="modal modal-map">
+    <section class="modal modal-map hidden">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <!-- Здесь будет карта -->
-      <button class="modal-close" type="button">Закрыть</button>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300296!2d30.320858715906567!3d59.938719169054416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2snl!4v1602517660784!5m2!1suk!2snl"
+        width="943" height="449" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
   </body>
 </html>
