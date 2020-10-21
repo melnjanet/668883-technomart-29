@@ -24,7 +24,7 @@
                 </svg>
               </figure>
               <label for="search" class="search-label" aria-label="Поиск"></label>
-              <input class="search" type="search" name="search" id="search" placeholder="Поиск:">
+              <input class="search" type="text" name="search" id="search" placeholder="Поиск:">
             </form>
             <div class="user-navigation">
               <a class="bookmarks-link" href="#">Закладки: <span>0</span></a>
@@ -433,10 +433,10 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="button send" type="submit">Отправить</button>
+          <button class="button send" type="submit" aria-label="Отправить">Отправить</button>
         </div>
       </form>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <div class="modal-close" aria-label="Закрыть"></div>
     </section>
     <section class="modal modal-map hidden">
       <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -444,7 +444,7 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300296!2d30.320858715906567!3d59.938719169054416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRltGPLCAxOTExODY!5e0!3m2!1suk!2snl!4v1602517660784!5m2!1suk!2snl"
         width="943" height="449" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
         tabindex="0"></iframe>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <div class="modal-close" aria-label="Закрыть"></div>
     </section>
     <section class="modal modal-cart hidden">
       <h2 class="visually-hidden">Корзина</h2>
@@ -455,7 +455,7 @@
         <a class="button ordering-button" href="#">Оформить заказ</a>
         <button class="button cancel-button">Продолжить покупки</button>
       </div>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <div class="modal-close" type="button" aria-label="Закрыть"></div>
     </section>
 
     <script src="js/script.js"></script>

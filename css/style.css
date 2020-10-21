@@ -1212,6 +1212,9 @@ img {
 .product:hover {
   -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .product-title {
@@ -1261,7 +1264,7 @@ img {
   -ms-flex-item-align: center;
   align-self: center;
   margin-top: 38px;
-  margin-bottom: 43px;
+  margin-bottom: 44px;
 }
 
 .product-user-actions a {
@@ -1393,7 +1396,7 @@ img {
   padding: 0;
 }
 
-.top-sellers-item {
+.top-sellers-item a {
   background: var(--basic-white);
   border: 1px solid var(--basic-extra-greylight);
   display: -webkit-box;
@@ -1409,13 +1412,12 @@ img {
   height: 145px;
 }
 
-.top-sellers-item a {
-  margin-top: 10px;
-}
-
 .top-sellers-item:hover {
   -webkit-filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .top-sellers-item:active {
@@ -1498,6 +1500,7 @@ img {
 }
 
 .services-navigation-item {
+  cursor: pointer;
   background: var(--basic-very-darkblue);
   -webkit-box-shadow: 0 1px 0 var(--basic-grayishblue), inset 0 1px 0 var(--basic-light-grayishblue);
   box-shadow: 0 1px 0 var(--basic-grayishblue), inset 0 1px 0 var(--basic-light-grayishblue);
@@ -1509,7 +1512,6 @@ img {
 }
 
 .services-navigation button {
-  cursor: pointer;
   background: transparent;
   border: none;
   font-weight: bold;
@@ -2668,8 +2670,6 @@ img {
   top: 7px;
   right: 22px;
   cursor: pointer;
-  border: none;
-  outline: 0;
 }
 
 .modal-close::before, .modal-close::after {
@@ -2791,6 +2791,7 @@ img {
 }
 
 .send {
+  cursor: pointer;
   width: 100%;
   background-color: var(--basic-red);
 }
