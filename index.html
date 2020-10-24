@@ -118,13 +118,13 @@
               </li>
             </ul>
             <div class="carousel-navigation">
-              <button class="carousel-navigation-prev" type="button" aria-label="Назад" disabled></button>
+              <button class="carousel-navigation-prev" type="button" aria-label="Назад"></button>
               <button class="carousel-navigation-next" type="button" aria-label="Вперёд"></button>
             </div>
             <a class="button default-button promo-carousel-link" href="catalog.html">Открыть каталог</a>
             <div class="carousel-controls">
-              <button class="current" type="button" aria-label="Первый слайд"></button>
-              <button type="button" aria-label="Второй слайд"></button>
+              <button class="current" type="button" aria-label="Первый слайд" onclick="window.sliders.currentSlide(1)"></button>
+              <button type="button" aria-label="Второй слайд" onclick="window.sliders.currentSlide(2)"></button>
             </div>
           </section>
         </section>
@@ -273,17 +273,17 @@
             <div class="services-slider">
               <ul class="services-navigation">
                 <li class="services-navigation-item services-navigation-item-active">
-                  <button type="button">Доставка</button>
+                  <button type="button" onclick="window.sliders.currentTab(0)">Доставка</button>
                 </li>
                 <li class="services-navigation-item">
-                  <button type="button">Гарантия</button>
+                  <button type="button" onclick="window.sliders.currentTab(1)">Гарантия</button>
                 </li>
                 <li class="services-navigation-item">
-                  <button type="button">Кредит</button>
+                  <button type="button" onclick="window.sliders.currentTab(2)">Кредит</button>
                 </li>
               </ul>
               <div class="services-slider-tabs">
-                <section class="services-slider-tab services-delivery slider-tab-active">
+                <section class="services-slider-tab services-delivery">
                   <h3 class="services-item-title">Доставка</h3>
                   <p class="services-item-description">Мы с удовольствием доставим ваш товар прямо<br>
                     к вашему подъезду совершенно бесплатно!<br>
@@ -293,15 +293,17 @@
                 </section>
                 <section class="services-slider-tab services-guarantee">
                   <h3 class="services-item-title">Гарантия</h3>
-                  <p class="services-item-description">Если купленный у нас товар поломается или заискрит, а также в
-                    случае  пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы
-                    обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.
+                  <p class="services-item-description">Если купленный у нас товар поломается или заискрит,<br>
+                    а также в случае  пожара, спровоцированного его
+                    возгоранием, вы всегда можете быть уверены в нашей
+                    гарантии. Мы обменяем сгоревший товар на новый.<br>
+                    Дом уж восстановите как-нибудь сами.
                   </p>
                 </section>
                 <section class="services-slider-tab services-credit">
                   <h3 class="services-item-title">Кредит</h3>
-                  <p class="services-item-description">Залезть в долговую яму стало проще! Кредитные консультанты придут
-                    вам на помощь.</p>
+                  <p class="services-item-description">Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.</p>
                   <a class="button default-button apply-button" href="#">Отправить заявку</a>
                 </section>
               </div>
@@ -458,6 +460,7 @@
       <div class="modal-close" type="button" aria-label="Закрыть"></div>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="js/dialogs.js"></script>
+    <script src="js/sliders.js"></script>
   </body>
 </html>
