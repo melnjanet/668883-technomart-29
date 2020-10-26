@@ -9,25 +9,14 @@
   const prevButton = document.contains(document.querySelector(`.carousel-navigation`)) ? document.querySelector(`.carousel-navigation-prev`) : ``;
 
   let slideIndex = 1;
-
-  const onNextButtonClick = () => {
-    if (slideIndex < slides.length) {
-      showSlides(slideIndex += 1 );
-    }
-  }
-
-  const onPrevButtonClick = () => {
-    if (slideIndex > 0 && slideIndex !== 1) {
-      showSlides(slideIndex -= 1);
-    }
-  }
+  let timeInterval
 
   const currentSlide = (n) => {
     showSlides(slideIndex = n);
   }
 
   const showSlides = (n) => {
-    if (slides.length > n) {
+    if (n > slides.length) {
       slideIndex = 1;
     }
 
@@ -43,8 +32,8 @@
       item.classList = item.classList.remove(`current`);
     });
 
-    slides[n - 1].classList.remove(`hidden`);
-    dots[n - 1].classList.add(`current`);
+    slides[slideIndex - 1].classList.remove(`hidden`);
+    dots[slideIndex - 1].classList.add(`current`);
   }
 
   const slideTime = (n) => {
@@ -53,8 +42,21 @@
     showSlides(index);
   }
 
+  const timer = setInterval(slideTime, 5000);
+
+  const onNextButtonClick = () => {
+    showSlides(slideIndex += 1);
+      clearInterval(timer);
+      setInterval(timer, 5000);
+  }
+
+  const onPrevButtonClick = () => {
+    showSlides(slideIndex -= 1);
+      clearInterval(timer);
+      setInterval(timer, 5000);
+  }
+
   if (slides) {
-    setInterval(slideTime, 7000);
     showSlides(slideIndex);
     nextButton.addEventListener(`click`, onNextButtonClick);
     prevButton.addEventListener(`click`, onPrevButtonClick);
