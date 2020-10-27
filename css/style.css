@@ -313,6 +313,7 @@ img {
   color: var(--basic-white);
   border: none;
   background-color: transparent;
+  width: 229px;
 }
 
 .search::-webkit-input-placeholder {
@@ -1990,8 +1991,8 @@ img {
 }
 
 .filter-brands {
-  margin-top: 42px;
-  margin-bottom: 18px;
+  margin-top: 22px;
+  margin-bottom: 16px;
 }
 
 .brands-checkbox {
@@ -2009,7 +2010,7 @@ img {
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
-  padding-bottom: 27px;
+  padding: 16px 0 27px;
   border-top: 1px solid var(--basic-very-greylight);
   border-bottom: 1px solid var(--basic-very-greylight);
 }
@@ -2019,7 +2020,7 @@ img {
 }
 
 .brands-checkbox label {
-  margin: 15px 0 3px;
+  margin: 17px 0 2px;
 }
 
 .supplies-radio {
