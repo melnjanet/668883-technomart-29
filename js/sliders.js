@@ -9,7 +9,7 @@
   const prevButton = document.contains(document.querySelector(`.carousel-navigation`)) ? document.querySelector(`.carousel-navigation-prev`) : ``;
 
   let slideIndex = 1;
-  let timeInterval
+  const TIME_INTERVAL = 5000;
 
   const currentSlide = (n) => {
     showSlides(slideIndex = n);
@@ -42,18 +42,18 @@
     showSlides(index);
   }
 
-  const timer = setInterval(slideTime, 5000);
+  const timer = setInterval(slideTime, TIME_INTERVAL);
 
   const onNextButtonClick = () => {
     showSlides(slideIndex += 1);
       clearInterval(timer);
-      setInterval(timer, 5000);
+      setInterval(timer, TIME_INTERVAL);
   }
 
   const onPrevButtonClick = () => {
     showSlides(slideIndex -= 1);
       clearInterval(timer);
-      setInterval(timer, 5000);
+      setInterval(timer, TIME_INTERVAL);
   }
 
   if (slides) {
