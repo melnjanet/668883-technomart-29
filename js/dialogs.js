@@ -1,6 +1,5 @@
 "use strict";
 
-(() => {
   const contactUs = document.contains(document.querySelector(`.contact-us`)) ? document.querySelector(`.contact-us`) : ``;
   const modalFeedback = document.contains(document.querySelector(`.modal-feedback`)) ? document.querySelector(`.modal-feedback`) : ``;
   const modalFeedbackClose = document.contains(document.querySelector(`.modal-feedback`)) ? modalFeedback.querySelector(`.modal-close`) : ``;
@@ -133,4 +132,3 @@
   });
 
   modalCartClose.addEventListener(`click`, onCloseModalCartClick);
-})();

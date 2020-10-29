@@ -1,6 +1,5 @@
 "use strict";
 
-(() => {
   const slides = document.contains(document.querySelector(`.carousel-list`)) ? document.querySelectorAll(`.carousel-item`) : ``;
   const dots = document.contains(document.querySelector(`.carousel-list`)) ? document.querySelector(`.carousel-controls`).children : ``;
   const tabs = document.contains(document.querySelector(`.services-slider`)) ? document.querySelectorAll(`.services-slider-tab`) : ``;
@@ -92,4 +91,3 @@
     currentTab,
     currentSlide
   }
-})();

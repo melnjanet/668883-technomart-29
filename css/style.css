@@ -86,6 +86,8 @@
   --basic-darkgreen: #367315;
   --basic-litegreen: #00ca74;
   --basic-very-lightbrown: #f7f3ec;
+  --basic-grayish-orange: #d5c6b4;
+  --basic-slightly-desaturated-orange: #d5c6b4;
 
   --transparent-white-05: rgba(255, 255, 255, 0.5);
   --transparent-white-03: rgba(255, 255, 255, 0.3);
@@ -953,7 +955,7 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 123px
+  min-height: 123px
 }
 
 .promo-item h3 {
@@ -1065,11 +1067,11 @@ img {
 }
 
 .promo-slide-1 {
-  background: url("../img/man-and-power-drill.jpg") no-repeat;
+  background: var(--basic-grayish-orange) url("../img/man-and-power-drill.jpg") no-repeat;
 }
 
 .promo-slide-2 {
-  background: url("../img/man-and-drill.jpg") no-repeat;
+  background: var(--basic-slightly-desaturated-orange) url("../img/man-and-drill.jpg") no-repeat;
 }
 
 .slide-current {
@@ -1309,7 +1311,7 @@ img {
 
 .product-user-actions a {
   width: 135px;
-  height: 38px;
+  min-height: 38px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-box;
@@ -1454,7 +1456,7 @@ img {
   -ms-flex-align: center;
   align-items: center;
   width: 220px;
-  height: 145px;
+  min-height: 145px;
 }
 
 .top-sellers-item:hover {
@@ -1472,7 +1474,7 @@ img {
 /* Services */
 
 .services {
-  height: 522px;
+ min-height: 522px;
 }
 
 .services-bar {
@@ -1501,7 +1503,7 @@ img {
 }
 
 .services-slider {
-  height: 284px;
+  min-height: 284px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 240px 80px 1fr;
@@ -1718,6 +1720,7 @@ img {
 .companies-list-item::before {
   content: "";
   display: inline-block;
+  vertical-align: baseline;
   width: 25px;
   height: 2px;
   background-color: var(--basic-red);
@@ -1781,6 +1784,7 @@ img {
 
 .map {
   display: inline-block;
+  vertical-align: baseline;
   margin-bottom: 19px;
 }
 
@@ -1910,7 +1914,7 @@ img {
 
 .slider-range-wrapper {
   position: relative;
-  height: 80px;
+  min-height: 80px;
   margin: 10px 0;
   padding: 0 20px;
   overflow: hidden;
@@ -2284,7 +2288,7 @@ img {
   font-size: 21px;
   line-height: 20px;
   width: 21px;
-  height: 22px;
+  min-height: 22px;
   display: block;
   border-bottom: none;
   cursor: pointer;
@@ -2493,7 +2497,7 @@ img {
   display: grid;
   -ms-grid-rows: 82px 1fr;
   grid-template-rows: 82px 1fr;
-  height: 192px;
+  min-height: 192px;
 }
 
 .footer-top-row {
@@ -2609,7 +2613,7 @@ img {
 
 .footer-bottom-bar {
   background: var(--basic-grayishblue);
-  height: 107px;
+  min-height: 107px;
 }
 
 .footer-bottom {
@@ -2843,7 +2847,7 @@ img {
 .feedback-form textarea {
   margin-top: 11px;
   width: 460px;
-  height: 114px;
+  min-height: 114px;
   padding: 7px 12px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -3037,6 +3041,17 @@ img {
 /* Animations */
 
 @-webkit-keyframes bounce {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  25% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
   from {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
